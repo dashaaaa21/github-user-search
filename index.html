@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Пошук GitHub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #e8f1f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 360px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .search {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background: #a0c4ff;
+      color: #333;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #90b4ef;
+    }
+
+    img {
+      width: 120px;
+      border-radius: 50%;
+      margin: 10px auto;
+      display: none;
+    }
+
+    .info {
+      text-align: left;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .row b {
+      color: #555;
+    }
+
+    .message {
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #b00020;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>Пошук GitHub користувача</h1>
+
+  <div class="search">
+    <input type="text" id="login" placeholder="Введіть логін...">
+    <button id="searchBtn">Пошук</button>
+    <button id="exampleBtn">Приклад</button>
+  </div>
+
+  <img id="avatar" src="" alt="Аватар">
+
+  <div class="info">
+    <div class="row"><b>Ім'я:</b> <span id="name">-</span></div>
+    <div class="row"><b>Логін:</b> <span id="loginOut">-</span></div>
+    <div class="row"><b>GitHub:</b> <span id="html_url">-</span></div>
+    <div class="row"><b>Місто:</b> <span id="location">-</span></div>
+    <div class="row"><b>Пошта:</b> <span id="email">-</span></div>
+    <div class="row"><b>Підписники:</b> <span id="followers">-</span></div>
+    <div class="row"><b>Підписок:</b> <span id="following">-</span></div>
+  </div>
+
+  <div class="message" id="message"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
